@@ -29,6 +29,9 @@ console.log(dburl)
 // o1GW8GGxeb0zYBpb;
 // "mongodb://localhost:27017/yelp-camp"
 
+
+const port=process.env.PORT||3000
+
 mongoose.connect("mongodb://localhost:27017/yelp-camp", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -127,6 +130,6 @@ app.use((err, req, res, next) => {
   res.render("error", { err });
 });
 
-app.listen(8080, () => {
-  console.log("listening at 8080");
+app.listen(port, () => {
+  console.log(`listening at ${port}`);
 });
