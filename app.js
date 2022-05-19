@@ -32,7 +32,7 @@ console.log(dburl)
 
 const port=process.env.PORT||3000
 
-mongoose.connect(dburl, {
+mongoose.connect("mongodb://localhost:27017/yelp-camp", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
