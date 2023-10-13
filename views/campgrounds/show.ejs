@@ -1,5 +1,46 @@
 <% layout('./layout/boilerplate') %>
     <link rel="stylesheet" href="/stylesheet.css">
+    <style>
+        #map{
+            background-color: red;
+            width: 400px;
+            margin-left: 60px;
+        }
+        @media (max-width:449px){
+            #map{
+               width: 150px;
+               margin-left: 5px;
+            }
+        }
+        @media (min-width:450px)and (max-width:610px){
+            #map{
+                width: 200px;
+                margin-left: 10px;
+            }
+        }
+        @media (min-width:600px)and (max-width:791px){
+            #map{
+                width: 250px;
+                margin-left: 30px;
+            }
+        }
+        @media (min-width:790px)and (max-width:880px){
+            #map{
+                width: 300px;
+            }
+        }
+        @media (min-width:881px)and (max-width:1000px){
+            #map{
+                width: 350px;
+            }
+        }
+        @media (min-width:1000px){
+            #map{
+                width: 400px;
+                margin-left: 60px;
+            }
+        }
+    </style>
 
   
 
@@ -68,7 +109,7 @@
         </div>
         <!-- <div id='map' style='width: 400px; height: 300px;'></div> -->
         <div class="col-6">
-            <div id='map' style='width: 400px; height: 300px; margin-bottom: 30px; border-radius: 40px;'></div>
+            <div id='map' style=' height: 300px; margin-bottom: 30px; border-radius: 40px;'></div>
             <% if(currentUser) {%>
                 <h2>Leave Reviews</h2>
 
